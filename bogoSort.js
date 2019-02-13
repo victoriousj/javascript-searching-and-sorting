@@ -1,4 +1,4 @@
-var numbers = require("./numbers");
+const utils = require('./utils');
 
 // Randomly shuffle the elements of the array that's passed in.
 const shuffle = arr => {
@@ -18,14 +18,11 @@ const shuffle = arr => {
   return arr;
 }
 
-// Determine if an array is properly sorted
-const isSorted = arr => arr.every((v, i, a) => !i || a[i - 1] <= v);
-
 // Shuffles array until it's sorted.
 const bogoSort = arr => {
   let iterations = 1;
   shuffle(arr);
-  while (!isSorted(arr)) {
+  while (!utils.isSorted(arr)) {
     arr = shuffle(arr);
     console.log(iterations++, arr);
   }
@@ -34,10 +31,5 @@ const bogoSort = arr => {
 
 // Bogo Sort
 module.exports = {
-  shuffle: shuffle,
-  isSorted: isSorted,
-  bogoSort: bogoSort
+  sort: bogoSort
 };
-
-const testValues = numbers.eightNumbers;
-var sorted = bogoSort(testValues);
