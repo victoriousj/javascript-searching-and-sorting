@@ -2,5 +2,5 @@
 const isSorted = arr => arr.every((v, i, a) => !i || a[i - 1] <= v);
 
 module.exports = {
-    isSorted: isSorted,
-}
+  isSorted: isSorted
+};

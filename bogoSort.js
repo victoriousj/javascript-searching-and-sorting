@@ -1,4 +1,4 @@
-const utils = require('./utils');
+const utils = require("./utils");
 
 // Randomly shuffle the elements of the array that's passed in.
 const shuffle = arr => {
@@ -16,7 +16,7 @@ const shuffle = arr => {
   }
 
   return arr;
-}
+};
 
 // Shuffles array until it's sorted.
 const bogoSort = arr => {
@@ -27,7 +27,7 @@ const bogoSort = arr => {
     console.log(iterations++, arr);
   }
   return arr;
-}
+};
 
 // Bogo Sort
 module.exports = {

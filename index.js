@@ -1,5 +1,6 @@
 const numbers = require("./numbers");
 const bogoSort = require("./bogoSort");
+const selectionSort = require("./selectionSort");
 
-const testValues = numbers.eightNumbers;
-var sorted = bogoSort.sort(testValues);
+const testValues = numbers.tenThousandNumbers;
+var sorted = selectionSort.sort(testValues);
