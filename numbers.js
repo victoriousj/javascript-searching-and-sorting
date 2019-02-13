@@ -1,6 +1,6 @@
 module.exports = {
-  fiveNumbers: [8, 5, 1, 4, 7],
-  eightNumbers: [4, 6, 3, 2, 9, 7, 3, 5],
+  fiveNumbers: [2, 5, 1, 4, 3],
+  eightNumbers: [4, 6, 3, 2, 1, 7, 8, 5],
   tenThousandNumbers: [
     7114,
     9526,

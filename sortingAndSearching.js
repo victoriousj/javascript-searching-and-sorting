@@ -1,7 +1,7 @@
 var numbers = require("./numbers");
 
 // Randomly shuffle the elements of the array that's passed in.
-function shuffle(arr) {
+const shuffle = arr => {
   let swapIndex = arr.length;
   let temp, randomIndex;
 
@@ -19,19 +19,17 @@ function shuffle(arr) {
 }
 
 // Determine if an array is properly sorted
-function isSorted(arr) {
-  return arr.every((v, i, a) => !i || a[i - 1] <= v);
-}
+const isSorted = arr => arr.every((v, i, a) => !i || a[i - 1] <= v);
 
 // Shuffles array until it's sorted.
-function bogoSort(array) {
+const bogoSort = arr => {
   let iterations = 1;
-  shuffle(array);
-  while (isSorted(array) == false) {
-    array = shuffle(array);
-    console.log(iterations++, array);
+  shuffle(arr);
+  while (!isSorted(arr)) {
+    arr = shuffle(arr);
+    console.log(iterations++, arr);
   }
-  return array;
+  return arr;
 }
 
 // Bogo Sort
