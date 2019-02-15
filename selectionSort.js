@@ -10,7 +10,6 @@ const indexOfMin = arr => {
 const selectionSort = arr => {
   let sortedArr = [];
   while (arr.length > 0) {
-    console.log(`[${arr}] - [${sortedArr}]`);
     var indexToMove = indexOfMin(arr);
     sortedArr.push(arr.splice(indexToMove, 1)[0]);
   }
