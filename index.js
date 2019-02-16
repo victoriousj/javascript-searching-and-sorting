@@ -4,7 +4,7 @@ const mergeSort = require("./mergeSort");
 const quickSort = require("./quickSort");
 const selectionSort = require("./selectionSort");
 
-const testValues = numbers.tenThousandNumbers;
+const testValues = numbers.fiveNumbers;
 console.log(testValues);
-var sorted = quickSort.sort(testValues);
+var sorted = mergeSort.sort(testValues);
 console.log(sorted);

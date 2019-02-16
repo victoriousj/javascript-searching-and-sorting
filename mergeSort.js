@@ -8,13 +8,10 @@ const mergeSort = arr => {
   let leftIndex = 0;
   let rightIndex = 0;
   let sortedValues = [];
-
   while (leftIndex < lowerHalfArr.length && rightIndex < upperHalfArr.length) {
-    if (lowerHalfArr[leftIndex] < upperHalfArr[rightIndex]) {
-      sortedValues.push(lowerHalfArr[leftIndex++]);
-    } else {
-      sortedValues.push(upperHalfArr[rightIndex++]);
-    }
+    lowerHalfArr[leftIndex] < upperHalfArr[rightIndex]
+      ? sortedValues.push(lowerHalfArr[leftIndex++])
+      : sortedValues.push(upperHalfArr[rightIndex++]);
   }
 
   return [
