@@ -1,4 +1,4 @@
-const utils = require("./utils");
+const utils = require("../utils");
 
 // Randomly shuffle the elements of the array that's passed in.
 const shuffle = arr => {
