@@ -6,8 +6,7 @@ const numbers = require("./Data/numbers");
 const sort = require("./sorting");
 
 // Searching Algorithms
-const linearSearch = require("./Searching/linearSort");
-const binarySearch = require("./Searching/binarySearch");
+const search = require("./searching");
 
 let arr = numbers.hundredNumbers;
 console.log(arr);
