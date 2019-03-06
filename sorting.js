@@ -1,4 +1,4 @@
-const utils = require("../utils");
+const utils = require("./utils");
 
 const indexOfMin = arr => {
   let minIndex = 0;
@@ -96,9 +96,38 @@ const bubbleSort = arr => {
   }
 };
 
+const cocktailSort = arr => {
+  let swapped;
+  do {
+    for (let i = 0; i < arr.length - 2; i++) {
+      if (arr[i] > arr[i + 1]) {
+        const temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+        swapped = true;
+      }
+    }
+    if (!swapped) break;
+
+    swapped = false;
+
+    for (let i = arr.length - 2; i > 0; i--) {
+      if (arr[i] > arr[i + 1]) {
+        const temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+        swapped = true;
+      }
+    }
+  } while (swapped);
+  return arr;
+};
+
 module.exports = {
   bogoSort,
   quickSort,
   mergeSort,
+  bubbleSort,
+  cocktailSort,
   selectionSort
 };
